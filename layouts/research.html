@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section id="research" class="lab-section container" aria-labelledby="research-title">
+  {{ partial "lab/section-head.html" (dict "level" 1 "label" "Research" "id" "research" "title" "Protecting crops.<br>Preserving our tools." "intro" "Understanding pest populations and resistance is the foundation of durable corn insect management.") }}
+  <div class="research-grid">
+    {{ range $i, $item := hugo.Data.research }}
+      <article class="research-item">
+        {{ with .image }}
+          {{ with resources.Get . }}
+            {{ $oriented := .Filter images.AutoOrient }}
+            {{ $img := $oriented.Resize "1200x webp q85" }}
+            <img class="research-image{{ if eq $item.imageFit "contain" }} research-image--diagram{{ end }}" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $item.imageAlt | default $item.title }}" loading="lazy">
+          {{ else }}
+            {{ warnf "Research image not found: %s" . }}
+          {{ end }}
+        {{ end }}
+        <div class="research-card-top">
+          <span class="research-number">{{ printf "%02d" (add $i 1) }}</span>
+          <span class="research-tag">{{ .title }}</span>
+        </div>
+        <h3>{{ .description | markdownify }}</h3>
+        <ul class="research-chips">
+          {{ range .points }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

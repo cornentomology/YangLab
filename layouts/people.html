@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section id="people" class="lab-section people-section" aria-labelledby="current-members"><div class="container">
+  <h1 id="current-members" class="people-page-title">Current Members</h1>
+  {{ $definitions := slice
+    (dict "key" "principal-investigator" "title" "PI")
+    (dict "key" "postdoctoral" "title" "Postdocs")
+    (dict "key" "staff" "title" "Staff")
+    (dict "key" "graduate" "title" "Graduate Students")
+    (dict "key" "undergraduate" "title" "Undergraduates")
+  }}
+  {{ $groups := slice }}{{ $knownKeys := slice }}
+  {{ range $definitions }}
+    {{ $knownKeys = $knownKeys | append .key }}
+    {{ $members := where hugo.Data.people "group" .key }}
+    {{ if $members }}{{ $groups = $groups | append (dict "key" .key "title" .title "members" $members) }}{{ end }}
+  {{ end }}
+  {{/* Keep members visible when a new entry has no group or an unrecognized group. */}}
+  {{ $otherMembers := slice }}
+  {{ range hugo.Data.people }}
+    {{ if not (in $knownKeys (.group | default "")) }}{{ $otherMembers = $otherMembers | append . }}{{ end }}
+  {{ end }}
+  {{ if $otherMembers }}{{ $groups = $groups | append (dict "key" "other" "title" "Other Members" "members" $otherMembers) }}{{ end }}
+  <nav class="people-group-nav" aria-label="People sections">
+    {{ range $groups }}<a href="#{{ .key }}">{{ .title }}</a>{{ end }}
+    <a href="#alumni">Alumni</a>
+  </nav>
+  <div class="people-current-groups">
+    {{ range $groups }}
+    <section id="{{ .key }}" class="people-current-group" aria-labelledby="{{ .key }}-title">
+      <h2 id="{{ .key }}-title">{{ .title }}</h2>
+      <div class="people-grid">
+        {{ range .members }}{{ partial "lab/person-card.html" . }}{{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+</div></section>
+{{ partial "lab/alumni.html" . }}
+{{ end }}

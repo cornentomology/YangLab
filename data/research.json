@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Corn borers & Bt resistance",
+    "description": "Monitoring European corn borer resistance, assessing its genetic basis, and evaluating risks to transgenic Bt corn.",
+    "points": [
+      "Resistance surveillance and F₂ screening",
+      "Inheritance and resistance stability",
+      "Multi-state and international collaboration"
+    ],
+    "image": "images/research/ecb-f2-screening.png",
+    "imageAlt": "European corn borer F₂ screening workflow, from larval collection and rearing through single pairing, F₁ and F₂ families, diagnostic diet-overlay bioassays, and full-range assays.",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Corn rootworm management",
+    "description": "Evaluating management tools and the biology of western and northern corn rootworms.",
+    "points": [
+      "Bt traits, insecticides, and seed treatments",
+      "Larval competition and feeding behavior",
+      "Egg cold tolerance and diapause"
+    ],
+    "image": "images/research/corn-rootworm-greenhouse.png",
+    "imageAlt": "Four-panel greenhouse experiment showing potted corn plants at different stages and enclosed in mesh cages.",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Corn earworm & invasive pests",
+    "description": "Studying resistance in corn earworm and monitoring risks associated with the invasive Old World bollworm, *Helicoverpa armigera*.",
+    "points": [
+      "Bt resistance",
+      "Invasive insect monitoring and risk assessment",
+      "Sweet corn pest management"
+    ],
+    "image": "images/research/cew-owb-monitoring.png",
+    "imageAlt": "Corn earworm and Old World bollworm monitoring workflow: moth collection and preservation, DNA extraction, molecular species identification, CYP337B3 resistance allele screening, sequencing, and data analysis.",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Sustainable pest management",
+    "description": "Connecting pest surveys and efficacy trials with decisions that reduce unnecessary insecticide use.",
+    "points": [
+      "Statewide corn insect surveillance",
+      "Neonicotinoid seed treatments in corn and soybean",
+      "Pollinator protection and grower outreach"
+    ],
+    "image": "images/research/field-pest-management.jpg",
+    "imageAlt": "Potted corn plants and trial containers beside a corn field.",
+    "imageFit": "cover"
+  },
+  {
+    "title": "Resistance mechanisms",
+    "description": "Characterizing the genetic, molecular, biochemical, and physiological mechanisms underlying Bt resistance",
+    "points": [
+      "Mechanisms under Bt resistance",
+      "Bioinformatics",
+      "Genomics",
+      "RNAi",
+      "Gene editing"
+    ],
+    "image": "images/research/resistance-mechanisms.png",
+    "imageAlt": "Research workflow connecting field problems, insect monitoring, laboratory diagnostics, biology and genomics, DNA markers, and pest and resistance management.",
+    "imageFit": "contain"
+  }
+]

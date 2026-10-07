@@ -1,0 +1,9 @@
+{{ define "main" }}
+<section id="projects" class="lab-section container" aria-labelledby="projects-title">
+ {{ partial "lab/section-head.html" (dict "level" 1 "label" "Projects & funding" "id" "projects" "title" "Research supported<br>by strong partnerships." "intro" "Projects span resistance monitoring, pest biology, management trials, and sustainable crop protection.") }}
+ <div class="stats-grid">{{ range hugo.Data.funding.stats }}<div class="stat"><p class="stat-value">{{ .value }}</p><h3>{{ .label }}</h3><p>{{ .detail }}</p></div>{{ end }}</div>
+ {{ with hugo.Data.funding.note }}<p class="source-note">{{ . }}</p>{{ end }}
+ {{ partial "lab/project-portfolio.html" . }}
+ {{ partial "lab/funding-partners.html" . }}
+</section>
+{{ end }}

@@ -1,0 +1,20 @@
+{{- $page := .page -}}
+{{- $photo := .photo -}}
+{{- $src := $photo.image | default "" -}}
+{{- $remote := or (hasPrefix $src "https://") (hasPrefix $src "http://") -}}
+{{- $data := dict "src" ($src | relURL) "full" ($src | relURL) "alt" ($photo.alt | default $page.Title) "caption" ($photo.caption | default "") "width" ($photo.width | default 0) "height" ($photo.height | default 0) -}}
+{{- if $remote -}}
+  {{- $data = merge $data (dict "src" $src "full" $src) -}}
+{{- else -}}
+  {{- $resource := resources.Get $src -}}
+  {{- if not $resource }}{{ $resource = $page.Resources.Get $src }}{{ end -}}
+  {{- with $resource -}}
+    {{- if reflect.IsImageResourceProcessable . -}}
+      {{- $dimensions := partial "lab/image-dimensions.html" . -}}
+      {{- $data = merge $data (dict "src" .RelPermalink "full" .RelPermalink "width" $dimensions.width "height" $dimensions.height) -}}
+    {{- else -}}
+      {{- $data = merge $data (dict "src" .RelPermalink "full" .RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $data -}}

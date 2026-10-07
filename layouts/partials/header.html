@@ -1,0 +1,27 @@
+{{ partial "lab/hiring-banner.html" . }}
+<div class="institution-bar container"><span>{{ .Site.Params.institution }}</span><span class="institution-field">{{ .Site.Params.department }}</span></div>
+<header class="lab-header">
+  <div class="container header-inner">
+    <a class="lab-wordmark" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">{{ .Site.Params.shortTitle | default .Site.Title }}<span class="wordmark-dot">.</span></a>
+    <nav id="lab-navigation" class="lab-nav" aria-label="Main navigation">
+      {{ range .Site.Menus.main }}
+        {{ if eq .Name "People" }}
+        <a href="{{ "people/" | relURL }}"{{ if eq $.Section "people" }} aria-current="page"{{ end }}>People</a>
+        {{ else }}<a href="{{ .URL | relURL }}"{{ if hasPrefix $.RelPermalink (.URL | relURL) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+      {{ end }}
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.5 3.2a8.2 8.2 0 1 0 6.3 12.6A7 7 0 0 1 14.5 3.2z"/></svg>
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 4v2.2M12 17.8V20M4 12h2.2M17.8 12H20M6.3 6.3l1.6 1.6M16.1 16.1l1.6 1.6M17.7 6.3l-1.6 1.6M7.9 16.1l-1.6 1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    </button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="lab-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+  </div>
+</header>
+<style>
+.nav-caret{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;margin-top:1px;transform-origin:center;transition:transform .34s cubic-bezier(.34,1.45,.64,1)}
+.nav-dropdown[open] > summary .nav-caret{transform:rotate(180deg)}
+.nav-dropdown:not([open]) > summary:hover .nav-caret{transform:translateY(2px)}
+.nav-submenu{transform-origin:top center}
+.nav-dropdown[open] > .nav-submenu{animation:nav-submenu-in .22s cubic-bezier(.2,.8,.2,1)}
+@keyframes nav-submenu-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+</style>

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Fei Yang",
+    "group": "principal-investigator",
+    "role": "Assistant Professor",
+    "yearAppointed": "May 2023",
+    "project": "",
+    "image": "images/people/fei-yang.png",
+    "url": "https://entomology.umn.edu/people/fei-yang",
+    "cv": "",
+    "links": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=SfACRjcAAAAJ&hl=en"
+      },
+      {
+        "label": "ResearchGate",
+        "url": "https://www.researchgate.net/profile/Fei-Yang-51"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0000-0001-5162-4575"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/fei-yang-3508368a/"
+      }
+    ],
+    "interests": [""]
+  },
+  {
+    "name": "Yucheng Wang",
+    "group": "postdoctoral",
+    "role": "Postdoctoral researcher",
+    "project": "",
+    "image": "images/people/yucheng-wang.jpeg",
+    "url": "",
+    "cv": "",
+    "links": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=11_48SYAAAAJ&hl=en"
+      }
+    ],
+    "interests": [""],
+    "profileSlug": "yucheng-wang"
+  },
+  {
+    "name": "Qinglei Ming",
+    "group": "postdoctoral",
+    "role": "Postdoctoral researcher",
+    "image": "images/people/qinglei-ming.png",
+    "url": "",
+    "cv": "",
+    "links": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=mDU7PIMAAAAJ&hl=en"
+      }
+    ],
+    "interests": [""],
+    "profileSlug": "qinglei-ming"
+  },
+  {
+    "name": "Yuchun Wang",
+    "group": "staff",
+    "role": "Lab technician",
+    "project": "",
+    "image": "images/people/yuchun-wang.jpeg",
+    "url": "",
+    "cv": "",
+    "links": [],
+    "interests": [""],
+    "profileSlug": "yuchun-wang"
+  },
+  {
+    "name": "Tatum Dwyer",
+    "group": "graduate",
+    "role": "PhD student",
+    "project": "",
+    "image": "images/people/tatum-dwyer.png",
+    "url": "",
+    "cv": "",
+    "links": [
+      {
+        "label": "Scholar",
+        "url": "https://scholar.google.com/citations?user=_2qeqKgAAAAJ&hl=en"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tatumdwyer/"
+      }
+    ],
+    "interests": [""],
+    "profileSlug": "tatum-dwyer"
+  },
+  {
+    "name": "Hunter Ness",
+    "group": "graduate",
+    "role": "MS student",
+    "project": "",
+    "image": "images/people/hunter-ness.png",
+    "url": "",
+    "cv": "",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/hunter-ness-751889293/"
+      }
+    ],
+    "interests": [""],
+    "profileSlug": "hunter-ness"
+  },
+  {
+    "name": "Haobo Zhang",
+    "group": "graduate",
+    "role": "MS student",
+    "image": "images/people/haobo-zhang.png",
+    "url": "",
+    "cv": "",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/haobo-zhang-0462a332a/"
+      }
+    ],
+    "interests": [""],
+    "profileSlug": "haobo-zhang"
+  },
+  {
+    "name": "Loi Shah",
+    "group": "undergraduate",
+    "role": "Undergraduate researcher",
+    "project": "",
+    "image": "images/people/loi-shah.png",
+    "url": "",
+    "cv": "",
+    "links": [],
+    "interests": [""],
+    "profileSlug": "loi-shah"
+  },
+   {
+    "name": "Alexis Six",
+    "group": "undergraduate",
+    "role": "Undergraduate researcher",
+    "project": "",
+    "image": "images/people/alexis_six.jpeg",
+    "url": "",
+    "cv": "",
+    "links": [],
+    "interests": [""],
+    "profileSlug": "alexis_six"
+  },
+  {
+    "name": "Ruyue Xu",
+    "group": "undergraduate",
+    "role": "Undergraduate researcher",
+    "project": "",
+    "image": "images/people/ruyue-xu.jpg",
+    "url": "",
+    "cv": "",
+    "links": [],
+    "interests": [""],
+    "profileSlug": "ruyue-xu"
+  }
+]
