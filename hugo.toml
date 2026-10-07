@@ -1,4 +1,4 @@
-baseURL = 'https://cornentomology.github.io/CornEntoLab/'
+baseURL = 'https://cornentomology.github.io/YangLab/'
 title = 'Corn Entomology Lab'
 theme = 'stacknote'
 languageCode = 'en-US'
